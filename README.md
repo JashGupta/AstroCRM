@@ -6,10 +6,22 @@ I built this project to solve a real-world problem: helping independent consulta
 
 ---
 
-## 🔗 Live Links
+## 🔗 Live Links (DEMO)
 
-*   **Frontend Client:** [https://astro-crm-black.vercel.app/login](https://astro-crm-black.vercel.app/login)
+*   **Frontend Client:** [https://astro-crm-black.vercel.app](https://astro-crm-black.vercel.app)
+
 *   **Backend Server API:** [https://astrocrm-z71s.onrender.com](https://astrocrm-z71s.onrender.com)
+
+---
+
+## Demo Credentials
+
+Use the following account to explore the application:
+
+Email: jashgupta77@gmail.com
+Password: Password123
+
+> This account contains sample clients, consultations, follow-ups, and revenue data for demonstration purposes.
 
 ---
 
@@ -30,9 +42,8 @@ I built this project to solve a real-world problem: helping independent consulta
 *   **Library:** React 18
 *   **Build Tool:** Vite
 *   **Styling:** Tailwind CSS
-*   **Charts:** Recharts
 *   **Icons:** Lucide React
-*   **API Client:** Axios (with interceptors for injecting headers and handling 401 logouts)
+*   **API Client:** Axios 
 
 ### Backend
 *   **Runtime:** Node.js
@@ -40,7 +51,6 @@ I built this project to solve a real-world problem: helping independent consulta
 *   **Database:** MongoDB
 *   **ODM:** Mongoose
 *   **Auth:** JWT (jsonwebtoken) & bcryptjs (password hashing)
-*   **Security:** Helmet, CORS, Cookie-Parser, and Express-Validator for form inputs
 
 ---
 
@@ -136,8 +146,7 @@ Ensure your local MongoDB instance is running at `mongodb://localhost:27017` or 
 ## ⚡ Challenges Faced
 
 *   **Secure Session Management:** Balancing security with user experience was tricky. I implemented a short-lived `accessToken` in memory and a secure, `httpOnly` `refreshToken` cookie. Writing the Axios request interceptors to automatically refresh expired sessions without kicking the user out took some trial and error.
-*   **MongoDB Analytics Aggregations:** Creating the charts on the dashboard required combining records from multiple collections (Clients, Consultations, and Follow-ups). I had to learn how to write complex MongoDB aggregation pipelines (`$facet`, `$group`, and `$lookup`) to retrieve monthly stats and group totals efficiently in single database requests.
-*   **Handling Timezone Offsets:** Clients book consultations and set follow-ups in their local time, but servers store datetimes in UTC. Resolving bugs where date pickers shifted dates by ±1 day depending on local timezone offsets was a challenging debugging exercise.
+*   **MongoDB Analytics Aggregations:** Creating the charts on the dashboard required combining records from multiple collections (Clients, Consultations, and Follow-ups).
 
 ---
 
@@ -155,4 +164,4 @@ Ensure your local MongoDB instance is running at `mongodb://localhost:27017` or 
 *   **Jash Gupta**
     *   GitHub: [@JashGupta](https://github.com/JashGupta)
     *   Project: AstroCRM Showcase
-    *   Email: jash@example.com
+    *   Email: jashgupta77@gmail.com
